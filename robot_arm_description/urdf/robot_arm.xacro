@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<robot name="robot_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find robot_arm_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find robot_arm_description)/urdf/robot_arm.trans" />
+<xacro:include filename="$(find robot_arm_description)/urdf/robot_arm.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.12998359347972183 0.1019120167264904 0.19612747843827918" rpy="0 0 0"/>
+    <mass value="122.02881593376527"/>
+    <inertia ixx="4.795532" iyy="4.841718" izz="0.867378" ixy="4e-06" iyz="-0.044736" ixz="0.001262"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robot_arm_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robot_arm_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+</robot>
