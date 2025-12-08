@@ -1,0 +1,7 @@
+drake_env/
+__pycache__/
+*.so
+*.log
+*.bag
+*.backup
+*.tmp
